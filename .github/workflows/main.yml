@@ -11,3 +11,9 @@ jobs:
     # Step 1: Checkout the repository
       - name: Checkout Repository 
       uses: actions/checkout@v3
+
+
+# Step 2: Update index.htmL
+# Check if the GitHub actor is the team Leader
+# Run the following CLI command to update index.html
+  sed -i '/<\/body›/i ‹p›Updated by Team Leader on ''$(date)'' ‹/p›' index.htm]
